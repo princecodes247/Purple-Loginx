@@ -1,0 +1,150 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+    --primary-color: #40196c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0.7em;
+}
+header {
+    height: 8vh;
+    padding: 1.5em;
+    padding-top: 4em;
+    display: flex;
+    align-items: center;
+
+}
+header button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+main {
+    padding: 1.6em;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2em;
+    height: 88vh;
+}
+
+form {
+    display: flex;
+    gap: 0.7em;
+    justify-content: center;
+}
+
+form input {
+    --size: 63px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 10%;
+    border: 1px solid #ccc;
+    font-size: 4em;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+input:focus, input:valid {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+.buttonGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.buttonGrid button{
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+    background: #ddd0;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.buttonGrid button:hover{
+   background: #ddd4;
+    
+}
+.buttonGrid button:active{
+   background: #ddd7;
+    
+}
+.fingerprintButton {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.buttonSet {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+    text-align: center;
+}
+
+.buttonSet button {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    height: 55px;
+    background-color: var(--primary-color);
+    font-size: 0.96em;
+    color: #fff;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.buttonSet a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+:is(.fingerprint_container, .fingerprint_sub, .fingerprint_image, .fingerprint_image_holder) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fingerprint_container {
+    width: 100%;
+    flex: 1;
+}
+.fingerprint_sub, .fingerprint_image {
+    padding: 20px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    
+    
+}
+.fingerprint_image {
+    
+}
+.fingerprint_image_holder {
+    background: var(--primary-color);
+    --size: 150px;
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+}
+.fingerprint_image img {
+    filter: invert(1);
+    width: 75px;
+}
